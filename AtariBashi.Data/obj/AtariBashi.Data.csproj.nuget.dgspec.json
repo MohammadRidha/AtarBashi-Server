@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\project-now\\AtarBashi-Server\\AtariBashi.Presentation\\AtariBashi.Data\\AtariBashi.Data.csproj": {}
+  },
+  "projects": {
+    "F:\\project-now\\AtarBashi-Server\\AtariBashi.Presentation\\AtariBashi.Data\\AtariBashi.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\project-now\\AtarBashi-Server\\AtariBashi.Presentation\\AtariBashi.Data\\AtariBashi.Data.csproj",
+        "projectName": "AtariBashi.Data",
+        "projectPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi.Presentation\\AtariBashi.Data\\AtariBashi.Data.csproj",
+        "packagesPath": "C:\\Users\\Destroier Wolf\\.nuget\\packages\\",
+        "outputPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi.Presentation\\AtariBashi.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Destroier Wolf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

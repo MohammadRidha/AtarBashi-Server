@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "AtarBashi.Services/1.0.0": {
+        "dependencies": {
+          "AtarBashi.Repo": "1.0.0"
+        },
+        "runtime": {
+          "AtarBashi.Services.dll": {}
+        }
+      },
+      "AtarBashi.Common/1.0.0": {
+        "dependencies": {
+          "AtarBashi.Data": "1.0.0"
+        },
+        "runtime": {
+          "AtarBashi.Common.dll": {}
+        }
+      },
+      "AtarBashi.Data/1.0.0": {
+        "runtime": {
+          "AtarBashi.Data.dll": {}
+        }
+      },
+      "AtarBashi.Repo/1.0.0": {
+        "dependencies": {
+          "AtarBashi.Common": "1.0.0"
+        },
+        "runtime": {
+          "AtarBashi.Repo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AtarBashi.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AtarBashi.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AtarBashi.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AtarBashi.Repo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

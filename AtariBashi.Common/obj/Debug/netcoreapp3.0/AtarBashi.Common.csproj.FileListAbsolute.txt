@@ -1,0 +1,12 @@
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\bin\Debug\netcoreapp3.0\AtarBashi.Common.deps.json
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\bin\Debug\netcoreapp3.0\AtarBashi.Common.dll
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\bin\Debug\netcoreapp3.0\AtarBashi.Common.pdb
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\bin\Debug\netcoreapp3.0\AtarBashi.Data.dll
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\bin\Debug\netcoreapp3.0\AtarBashi.Data.pdb
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.csprojAssemblyReference.cache
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.csproj.CoreCompileInputs.cache
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.AssemblyInfoInputs.cache
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.AssemblyInfo.cs
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.csproj.CopyComplete
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.dll
+F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Common\obj\Debug\netcoreapp3.0\AtarBashi.Common.pdb

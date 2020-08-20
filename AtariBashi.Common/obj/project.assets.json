@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "AtarBashi.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/AtarBashi.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AtarBashi.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AtarBashi.Data/1.0.0": {
+      "type": "project",
+      "path": "../AtariBashi.Data/AtarBashi.Data.csproj",
+      "msbuildProject": "../AtariBashi.Data/AtarBashi.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "AtarBashi.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Destroier Wolf\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Common\\AtarBashi.Common.csproj",
+      "projectName": "AtarBashi.Common",
+      "projectPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Common\\AtarBashi.Common.csproj",
+      "packagesPath": "C:\\Users\\Destroier Wolf\\.nuget\\packages\\",
+      "outputPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Destroier Wolf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Data\\AtarBashi.Data.csproj": {
+              "projectPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Data\\AtarBashi.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

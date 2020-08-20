@@ -1,0 +1,187 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Microsoft.AspNetCore.Razor.Design/2.1.2": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props": {}
+        }
+      },
+      "AtarBashi.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "AtarBashi.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AtarBashi.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AtarBashi.Common.dll": {}
+        }
+      },
+      "AtarBashi.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/AtarBashi.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AtarBashi.Data.dll": {}
+        }
+      },
+      "AtarBashi.Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "AtarBashi.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AtarBashi.Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AtarBashi.Repo.dll": {}
+        }
+      },
+      "AtarBashi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "AtarBashi.Repo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AtarBashi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AtarBashi.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AspNetCore.Razor.Design/2.1.2": {
+      "sha512": "fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.razor.design/2.1.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets",
+        "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props",
+        "microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",
+        "microsoft.aspnetcore.razor.design.nuspec",
+        "tasks/net46/Microsoft.AspNetCore.Razor.Tasks.dll",
+        "tasks/netstandard2.0/Microsoft.AspNetCore.Razor.Tasks.dll",
+        "tools/Microsoft.AspNetCore.Razor.Language.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/Microsoft.CodeAnalysis.Razor.dll",
+        "tools/Microsoft.CodeAnalysis.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "tools/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "tools/rzc.deps.json",
+        "tools/rzc.dll",
+        "tools/rzc.runtimeconfig.json"
+      ]
+    },
+    "AtarBashi.Common/1.0.0": {
+      "type": "project",
+      "path": "../AtariBashi.Common/AtarBashi.Common.csproj",
+      "msbuildProject": "../AtariBashi.Common/AtarBashi.Common.csproj"
+    },
+    "AtarBashi.Data/1.0.0": {
+      "type": "project",
+      "path": "../AtariBashi.Data/AtarBashi.Data.csproj",
+      "msbuildProject": "../AtariBashi.Data/AtarBashi.Data.csproj"
+    },
+    "AtarBashi.Repo/1.0.0": {
+      "type": "project",
+      "path": "../AtariBashi.Repo/AtarBashi.Repo.csproj",
+      "msbuildProject": "../AtariBashi.Repo/AtarBashi.Repo.csproj"
+    },
+    "AtarBashi.Services/1.0.0": {
+      "type": "project",
+      "path": "../AtariBashi.Services/AtarBashi.Services.csproj",
+      "msbuildProject": "../AtariBashi.Services/AtarBashi.Services.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "AtarBashi.Services >= 1.0.0",
+      "Microsoft.AspNetCore.Razor.Design >= 2.1.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Destroier Wolf\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Presentation\\AtarBashi.Presentation.csproj",
+      "projectName": "AtarBashi.Presentation",
+      "projectPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Presentation\\AtarBashi.Presentation.csproj",
+      "packagesPath": "C:\\Users\\Destroier Wolf\\.nuget\\packages\\",
+      "outputPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Presentation\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Destroier Wolf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Services\\AtarBashi.Services.csproj": {
+              "projectPath": "F:\\project-now\\AtarBashi-Server\\AtariBashi\\AtariBashi.Services\\AtarBashi.Services.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Razor.Design": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.1.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}
