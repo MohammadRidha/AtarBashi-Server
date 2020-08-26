@@ -12,3 +12,17 @@ F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Repo\obj\Debu
 F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.csproj.CopyComplete
 F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.dll
 F:\project-now\AtarBashi-Server\AtariBashi.Presentation\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.pdb
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Repo.deps.json
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Repo.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Repo.pdb
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Common.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Data.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Common.pdb
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\bin\Debug\netcoreapp3.0\AtarBashi.Data.pdb
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.csprojAssemblyReference.cache
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.csproj.CoreCompileInputs.cache
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.AssemblyInfoInputs.cache
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.AssemblyInfo.cs
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.csproj.CopyComplete
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Repo\obj\Debug\netcoreapp3.0\AtarBashi.Repo.pdb
