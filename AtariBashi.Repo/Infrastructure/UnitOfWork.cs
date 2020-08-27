@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AtarBashi.Data.Repositories.Interface;
+using AtarBashi.Data.Repositories.Repo;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtarBashi.Data.Infrastructure
@@ -15,8 +17,24 @@ namespace AtarBashi.Data.Infrastructure
         }
         #endregion
 
+        #region privateRepository
+
+        private IUserRepository userRepository;
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                if (userRepository == null)
+                {
+                    userRepository = new UserRepository(_db);
+                }
+                return userRepository;
+            }
+
+        }
+        #endregion
+
         #region Save
-       
 
         public void Save()
         {
@@ -31,7 +49,9 @@ namespace AtarBashi.Data.Infrastructure
         #endregion
 
         #region Disposable
+
         private bool disposed = false;
+
         protected virtual void Dispose(bool disposing)
         {
             if (!disposed)
