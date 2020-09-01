@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AtarBashi.Data.Repositories.Interface;
-using AtarBashi.Data.Repositories.Repo;
+using AtarBashi.Repo.Repositories.Interface;
+using AtarBashi.Repo.Repositories.Repo;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtarBashi.Data.Infrastructure

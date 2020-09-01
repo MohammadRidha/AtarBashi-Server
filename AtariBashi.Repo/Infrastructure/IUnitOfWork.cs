@@ -1,4 +1,4 @@
-﻿using AtarBashi.Data.Repositories.Interface;
+﻿using AtarBashi.Repo.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;

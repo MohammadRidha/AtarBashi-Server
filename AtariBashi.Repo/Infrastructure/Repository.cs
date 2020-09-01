@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -23,72 +24,82 @@ namespace AtarBashi.Data.Infrastructure
         #region Normal
         public void Insert(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Add(entity);
         }
         public TEntity Get(Expression<Func<TEntity, bool>> where)
         {
-            throw new NotImplementedException();
+            return _dbSet.Where(where).FirstOrDefault();
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet.AsEnumerable();
         }
 
         public TEntity GetById(object id)
         {
-            throw new NotImplementedException();
+            return _dbSet.Find(id);
+        }
+        public IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where)
+        {
+            return _dbSet.Where(where).AsEnumerable();
         }
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                throw new ArgumentException("There is no entity");
+            _dbSet.Update(entity);
         }
         public void Delete(object id)
         {
-            throw new NotImplementedException();
+            var entity = GetById(id);
+            if (entity == null)
+                throw new ArgumentException("There is no entity");
+            _dbSet.Remove(entity);
         }
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Remove(entity);
+
         }
 
         public void Delete(Expression<Func<TEntity, bool>> where)
         {
-            throw new NotImplementedException();
+            IEnumerable<TEntity> objs = _dbSet.Where(where).AsEnumerable();
+            foreach (TEntity item in objs)
+            {
+                _dbSet.Remove(item);
+            }
         }
         #endregion
 
         #region Async
-
-        public Task InsertAsync(TEntity entity)
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> where)
         {
-            throw new NotImplementedException();
+            return await _dbSet.Where(where).FirstOrDefaultAsync();
         }
 
-        public Task<TEntity> GetByIdAsync(object id)
+        public async Task<TEntity> GetByIdAsync(object id)
         {
-            throw new NotImplementedException();
+            return await _dbSet.FindAsync(id);
         }
-        public Task<IEnumerable<TEntity>> GetAllAsync()
+        public async Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> where)
         {
-            throw new NotImplementedException();
+            return await _dbSet.Where(where).ToListAsync();
+        }
+     
+        public async Task InsertAsync(TEntity entity)
+        {
+            await _dbSet.AddAsync(entity);
+        }
+       
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await _dbSet.ToListAsync();
         }
 
-        public Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> where)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<TEntity>> GetManyAsync(Expression<Func<TEntity, bool>> where)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 
