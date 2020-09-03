@@ -69,12 +69,13 @@ namespace AtarBashi.Presentation.Controllers.Site.Admin
         {
             var userFromRepo = await _authService.Login(userForLoginDto.UserName, userForLoginDto.Password);
             if (userFromRepo == null)
-                return Unauthorized(new ReturnMessage
-                {
-                    status = false,
-                    title = "خطا",
-                    message = "کاربری با این یوزر و کلمه عبور وجود ندارد"
-                });
+                return Unauthorized("کاربری با این یوزر و کلمه عبور وجود ندارد");
+                //return Unauthorized(new ReturnMessage
+                //{
+                //    status = false,
+                //    title = "خطا",
+                //    message = "کاربری با این یوزر و کلمه عبور وجود ندارد"
+                //});
 
             var claims = new[]
             {
