@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 namespace AtarBashi.Presentation.Controllers.Site.Admin
 {
     [Authorize]
+    [ApiExplorerSettings(GroupName = "Site")]
     [Route("site/admin/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

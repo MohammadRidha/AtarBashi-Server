@@ -13,6 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using NSwag;
+using NSwag.Generation.Processors.Security;
+using System.Linq;
 using System.Net;
 using System.Text;
 
@@ -29,6 +32,33 @@ namespace AtariBashi.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddOpenApiDocument(
+              document =>
+              {
+                  document.DocumentName = "Site";
+                  document.ApiGroupNames = new[] { "Site" };
+                  document.PostProcess = d =>
+                  {
+                      d.Info.Title = "Document AtarBashi";
+                  };
+                  document.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
+                  {
+                      Type = OpenApiSecuritySchemeType.ApiKey,
+                      Name = "Authorization",
+                      In = OpenApiSecurityApiKeyLocation.Header,
+                      Description = "Type into the textbox: Bearer {your JWT token}."
+                  });
+                  document.OperationProcessors.Add(
+                       new AspNetCoreOperationSecurityScopeProcessor("JWT"));
+                    // new OperationSecurityScopeProcessor("JWT"));
+                });
+            services.AddOpenApiDocument(document =>
+            {
+                document.DocumentName = "Api";
+                document.ApiGroupNames = new[] { "Api" };
+            });
+
             services.AddCors();
 
             #region IOC
@@ -60,7 +90,8 @@ namespace AtariBashi.Presentation
             {
                 app.UseExceptionHandler(builder =>
                 {
-                    builder.Run(async context => {
+                    builder.Run(async context =>
+                    {
                         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
                         var error = context.Features.Get<IExceptionHandlerFeature>();
@@ -80,6 +111,11 @@ namespace AtariBashi.Presentation
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // swagger
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

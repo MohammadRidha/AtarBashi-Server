@@ -161,4 +161,16 @@ F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\net
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.DotNet.InternalAbstractions.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Microsoft.Extensions.PlatformAbstractions.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Namotion.Reflection.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NJsonSchema.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NSwag.Annotations.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NSwag.AspNetCore.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NSwag.Core.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NSwag.Generation.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\NSwag.Generation.AspNetCore.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\obj\Debug\netcoreapp3.0\AtarBashi.Presentation.MvcApplicationPartsAssemblyInfo.cs
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\obj\Debug\netcoreapp3.0\AtarBashi.Presentation.MvcApplicationPartsAssemblyInfo.cache
