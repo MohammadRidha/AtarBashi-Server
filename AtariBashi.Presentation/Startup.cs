@@ -2,6 +2,8 @@
 using AtarBashi.Common.Helpers;
 using AtarBashi.Data.DataBaseContext;
 using AtarBashi.Data.Infrastructure;
+using AtarBashi.Services.Seed.Interface;
+using AtarBashi.Services.Seed.Service;
 using AtarBashi.Services.Site.Admin.Auth.Interfaces;
 using AtarBashi.Services.Site.Admin.Auth.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -62,6 +64,8 @@ namespace AtariBashi.Presentation
             services.AddCors();
 
             #region IOC
+
+            services.AddTransient<ISeedService, SeedService>();
             services.AddScoped<IUnitOfWork<AtarBashiDbContext>, UnitOfWork<AtarBashiDbContext>>();
             services.AddScoped<IAuthService, AuthService>();
 
@@ -80,7 +84,7 @@ namespace AtariBashi.Presentation
 
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedService seeder)
         {
             if (env.IsDevelopment())
             {
@@ -105,6 +109,9 @@ namespace AtariBashi.Presentation
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             }
+
+            // seed data
+           // seeder.SeedUsers();
 
             app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             ///

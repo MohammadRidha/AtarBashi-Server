@@ -4,14 +4,16 @@ using AtarBashi.Data.DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AtarBashi.Data.Migrations
 {
     [DbContext(typeof(AtarBashiDbContext))]
-    partial class AtarBashiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200909171236_update_Models")]
+    partial class update_Models
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
