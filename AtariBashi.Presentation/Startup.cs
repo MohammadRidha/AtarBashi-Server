@@ -21,6 +21,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
+
 namespace AtariBashi.Presentation
 {
     public class Startup
@@ -33,7 +34,12 @@ namespace AtariBashi.Presentation
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(opt =>
+            {
+                opt.SerializerSettings.ReferenceLoopHandling =
+                Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+            });
 
             services.AddOpenApiDocument(
               document =>
@@ -53,8 +59,8 @@ namespace AtariBashi.Presentation
                   });
                   document.OperationProcessors.Add(
                        new AspNetCoreOperationSecurityScopeProcessor("JWT"));
-                    // new OperationSecurityScopeProcessor("JWT"));
-                });
+                  // new OperationSecurityScopeProcessor("JWT"));
+              });
             services.AddOpenApiDocument(document =>
             {
                 document.DocumentName = "Api";
@@ -111,7 +117,7 @@ namespace AtariBashi.Presentation
             }
 
             // seed data
-           // seeder.SeedUsers();
+            // seeder.SeedUsers();
 
             app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             ///
