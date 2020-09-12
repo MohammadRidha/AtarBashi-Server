@@ -176,3 +176,5 @@ F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\net
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\obj\Debug\netcoreapp3.0\AtarBashi.Presentation.MvcApplicationPartsAssemblyInfo.cs
 F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\obj\Debug\netcoreapp3.0\AtarBashi.Presentation.MvcApplicationPartsAssemblyInfo.cache
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\AutoMapper.dll
+F:\project-now\AtarBashi-Server\AtariBashi\AtariBashi.Presentation\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

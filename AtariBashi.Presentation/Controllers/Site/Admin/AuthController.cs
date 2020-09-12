@@ -1,6 +1,6 @@
 ﻿using AtarBashi.Common.ErrorAndMessage;
 using AtarBashi.Data.DataBaseContext;
-using AtarBashi.Data.DTOs.Site.Admin;
+using AtarBashi.Data.DTOs.Site.Admin.Users;
 using AtarBashi.Data.Infrastructure;
 using AtarBashi.Data.Models;
 using AtarBashi.Services.Site.Admin.Auth.Interfaces;

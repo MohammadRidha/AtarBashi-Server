@@ -6,6 +6,7 @@ using AtarBashi.Services.Seed.Interface;
 using AtarBashi.Services.Seed.Service;
 using AtarBashi.Services.Site.Admin.Auth.Interfaces;
 using AtarBashi.Services.Site.Admin.Auth.Services;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -61,12 +62,14 @@ namespace AtariBashi.Presentation
                        new AspNetCoreOperationSecurityScopeProcessor("JWT"));
                   // new OperationSecurityScopeProcessor("JWT"));
               });
+            
             services.AddOpenApiDocument(document =>
             {
                 document.DocumentName = "Api";
                 document.ApiGroupNames = new[] { "Api" };
             });
 
+            services.AddAutoMapper(typeof(Startup));
             services.AddCors();
 
             #region IOC
