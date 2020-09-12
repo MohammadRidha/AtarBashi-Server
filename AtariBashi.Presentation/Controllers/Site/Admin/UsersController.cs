@@ -33,8 +33,8 @@ namespace AtarBashi.Presentation.Controllers.Site.Admin
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
-            var users = await _db.UserRepository.GetAllAsync();
-            var usersToReturn = _mapper.Map <IEnumerable<UserForListDto>>(users);
+            var users = await _db.UserRepository.GetManyAsync(null, null, "Photos,Prescriptions");
+            var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
             return Ok(usersToReturn);
         }
 
@@ -46,8 +46,8 @@ namespace AtarBashi.Presentation.Controllers.Site.Admin
             // leza az automapper estefadeh mikonim.yek model pichideh be model sadeh tabdil mikonim
             // to startup.cs activesh mikonim 
             // baad bayad berim ye folder besazim da presentation : Helpers > class
-            var user = await _db.UserRepository.GetByIdAsync(id);
-            var userToReturn = _mapper.Map<UserForDetailedDto>(user);
+            var user = await _db.UserRepository.GetManyAsync(p=>p.Id == id, null, "Photos");
+            var userToReturn = _mapper.Map<UserForDetailedDto>(user.SingleOrDefault());
             return Ok(userToReturn);
         }
     }
