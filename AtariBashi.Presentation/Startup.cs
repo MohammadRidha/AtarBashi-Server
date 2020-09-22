@@ -27,57 +27,74 @@ namespace AtariBashi.Presentation
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson(opt =>
-            {
-                opt.SerializerSettings.ReferenceLoopHandling =
-                Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            services.AddControllers()
+                .AddNewtonsoftJson(opt =>
+                {
+                    opt.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
 
-            });
 
-            services.AddOpenApiDocument(
-              document =>
-              {
-                  document.DocumentName = "Site";
-                  document.ApiGroupNames = new[] { "Site" };
-                  document.PostProcess = d =>
-                  {
-                      d.Info.Title = "Document AtarBashi";
-                  };
-                  document.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
-                  {
-                      Type = OpenApiSecuritySchemeType.ApiKey,
-                      Name = "Authorization",
-                      In = OpenApiSecurityApiKeyLocation.Header,
-                      Description = "Type into the textbox: Bearer {your JWT token}."
-                  });
-                  document.OperationProcessors.Add(
-                       new AspNetCoreOperationSecurityScopeProcessor("JWT"));
-                  // new OperationSecurityScopeProcessor("JWT"));
-              });
-            
             services.AddOpenApiDocument(document =>
             {
-                document.DocumentName = "Api";
-                document.ApiGroupNames = new[] { "Api" };
-            });
+                document.DocumentName = "Site";
+                document.ApiGroupNames = new[] { "Site", "Users" };
+                document.PostProcess = d =>
+                {
+                    d.Info.Title = "حکیم باشی داکیومنت";
+                    //d.Info.Contact = new OpenApiContact
+                    //{
+                    //    Name = "keyone",
+                    //    Email = string.Empty,
+                    //    Url = "https://twitter.com/keyone"
+                    //};
+                    //d.Info.License = new OpenApiLicense
+                    //{
+                    //    Name = "Use under LICX",
+                    //    Url = "https://example.com/license"
+                    //};
+                };
 
-            services.AddAutoMapper(typeof(Startup));
-            services.AddCors();
+
+                document.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
+                {
+                    Type = OpenApiSecuritySchemeType.ApiKey,
+                    Name = "Authorization",
+                    In = OpenApiSecurityApiKeyLocation.Header,
+                    Description = "Type into the textbox: Bearer {your JWT token}."
+                });
+
+                document.OperationProcessors.Add(
+                    new AspNetCoreOperationSecurityScopeProcessor("JWT"));
+                //      new OperationSecurityScopeProcessor("JWT"));
+
+
+            });
+            //services.AddOpenApiDocument(document =>
+            //{
+            //    document.DocumentName = "Api";
+            //    document.ApiGroupNames = new[] { "Api" };
+            //});
 
             #region IOC
 
             services.AddTransient<ISeedService, SeedService>();
             services.AddScoped<IUnitOfWork<AtarBashiDbContext>, UnitOfWork<AtarBashiDbContext>>();
             services.AddScoped<IAuthService, AuthService>();
+            #endregion
 
+            services.AddCors();
+            services.AddAutoMapper(typeof(Startup));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt =>
                 {
@@ -89,10 +106,10 @@ namespace AtariBashi.Presentation
                         ValidateAudience = false
                     };
                 });
-            #endregion
 
         }
 
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISeedService seeder)
         {
             if (env.IsDevelopment())
@@ -119,11 +136,11 @@ namespace AtariBashi.Presentation
                 //app.UseHsts();
             }
 
-            // seed data
-            // seeder.SeedUsers();
+            //app.UseHttpsRedirection();
+            //seeder.SeedUsers();
+             app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-            app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            ///
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

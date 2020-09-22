@@ -8,6 +8,7 @@ using AtarBashi.Data.Infrastructure;
 using AtarBashi.Services.Site.Admin.Auth.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -38,6 +39,7 @@ namespace AtarBashi.Presentation.Controllers.Site.Admin
             return Ok(usersToReturn);
         }
 
+      
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(string id)
         {
